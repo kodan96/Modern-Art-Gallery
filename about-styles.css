@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --iconbg: #d5966c;
+    --heading: #151515;
+    --subfont: #444444;
+    font-size: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    font-family: 'Outfit';
+    font-weight: 200;
+    color: #fff;
+}
+.back {
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 1.5em 2em;
+    background-color: var(--heading);
+    display: inline-block;
+    letter-spacing: 4px;
+    position: absolute;
+    font-size: 1.2em;
+    transform: translateX(70px);
+}
+
+.back::before {
+    content:url(img/icon-arrow-left.svg);
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -10;
+    padding: 1.7rem;
+    background-color: var(--iconbg);
+}
+
+.map-wrap {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+    
+}
+
+
+.location {
+    padding: 2rem 1rem;
+    background-color: var(--heading);
+
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1em;
+
+}
+
+.street {
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display';
+    color: var(--iconbg);
+    margin-bottom: 1em;
+}
+
+.address {
+    color: #fff;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 2em;
+}
+
+.mag {
+    background-color: var(--iconbg);
+    padding: 3rem 1rem;
+}
+
+.logo {
+    fill: var(--heading);
+}
+
+.mag p {
+    margin-block: 2rem;
+    color: #000;
+    font-weight: 400;
+}
+
+.socials svg {
+    margin-right: 1rem;
+}
+
+@media screen and (min-width:768px) {
+    .back {
+        left:50px
+    }
+
+    .map-img {
+        content: url(img/tablet/image-map@2x.png);
+    }
+
+    .location {
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem 2rem 2rem;
+        h1 {
+            margin-right: 5rem;
+        }
+    }
+
+    .location-txt {
+        max-width: 80%;
+        
+    }
+
+    .mag {
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: space-between;
+
+        .footer-txt {
+            max-width: 40%;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .back {
+        left:150px
+    }
+
+    .map-img {
+        content: url(img/desktop/image-map@2x.png);
+    }
+
+    .location {
+        justify-content: space-between;
+        padding-inline: 5rem;
+        h1 {
+            font-size: 3.5rem;
+            max-width: 40%;
+        }
+    }
+
+    .location div {
+        width: 50%
+    }
+
+    .mag {
+        padding-inline: 5rem;
+    }
+}
+
